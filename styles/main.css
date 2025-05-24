@@ -1,0 +1,263 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #0000cc;
+}
+
+header {
+  background-color: #3399cc;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+#box {
+  display: flex;
+  max-width: 100%;
+  flex-direction: row; 
+}
+
+/* Rail izquierdo */
+#railLeft {
+  width: 18%;
+  padding: 1rem;
+  background-color: #f3f3f3;
+  box-sizing: border-box;
+  order: -1; /
+}
+
+.alertLeft {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.great {
+  background-color: #e6f0fa;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+}
+
+.great h3 {
+  background-color: #c2d9ef;
+  margin: -0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+}
+
+
+#recentMessageList li {
+  display: flex;
+  align-items: start;
+  margin-bottom: 0.5rem;
+}
+
+.blockIcon {
+  display: block;
+  width: 2rem;
+  height: auto;
+  margin-right: 0.5rem;
+}
+
+#middle {
+  width: 60%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.breadcrumb {
+  margin-bottom: 1rem;
+}
+
+#company,
+#clientInfo {
+  width: 45%;
+  float: left;
+  font-size: 0.95rem;
+}
+
+#clientInfo {
+  float: right;
+  text-align: right;
+}
+
+hr {
+  clear: both;
+  margin: 2rem 0 1rem 0;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+th, td {
+  padding: 0.5rem;
+  vertical-align: top;
+}
+
+th {
+  text-align: left;
+  border-bottom: 2px solid #ccc;
+}
+
+.SendButton {
+  background-color: #3399cc;
+  color: white;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  text-align: center;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+aside {
+  width: 22%;
+  padding: 1rem;
+  background-color: #f3f3f3;
+  box-sizing: border-box;
+}
+
+#chList li,
+#sellList li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.chNumber {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.boxBook {
+  float: left;
+  margin-right: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+.bookTitle {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 1000px) {
+  #box {
+    flex-direction: column;
+  }
+
+  #railLeft, #middle, aside {
+    width: 100%;
+    float: none;
+    order: 0; 
+  }
+
+  #company, #clientInfo {
+    float: none;
+    text-align: left;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  body {
+    font-size: 14px;
+  }
+  
+  header {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+  
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  #box {
+    flex-direction: column;
+  }
+  
+  #railLeft, #middle, aside {
+    width: 100%;
+    padding: 0.8rem;
+  }
+  
+
+  #company, #clientInfo {
+    width: 100%;
+    float: none;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+  
+ 
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  #recentMessageList li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .blockIcon {
+    margin-bottom: 0.5rem;
+  }
+  
+  .SendButton {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  #sellList li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .boxBook {
+    float: none;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+}
+@media (max-width: 480px) {
+
+  .great, .alertLeft {
+    padding: 0.8rem;
+  }
+  
+  .chNumber {
+    font-size: 1.5rem;
+  }
+  
+  aside .great:nth-child(2) {
+    display: none;
+  }
+}
